@@ -15,5 +15,10 @@ public class playerController : MonoBehaviour
     void Update()
     {
         rigidBod.velocity = new Vector2(-2, rigidBod.velocity.y);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            rigidBod.velocity = new Vector2(rigidBod.velocity.x, 5);
+        }
     }
 }
