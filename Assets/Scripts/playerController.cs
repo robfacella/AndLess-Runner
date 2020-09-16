@@ -25,5 +25,11 @@ public class playerController : MonoBehaviour
         {
             rigidBod.velocity = new Vector2(rigidBod.velocity.x, 5);
         }
+        balance();
+    }
+    //Used to keep the Player Standing upright
+    void balance()
+    {
+        rigidBod.SetRotation(0);
     }
 }
