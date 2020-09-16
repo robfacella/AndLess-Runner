@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -41,10 +42,19 @@ public class playerController : MonoBehaviour
             jumps = extraJumps;
         }
         balance();
+        checkDead();
     }
     //Used to keep the Player Standing upright, Was tumbling like crazy at the edge of platforms
     void balance()
     {
         rigidBod.SetRotation(0);
+    }
+    //
+    void checkDead()
+    {
+        if (transform.position.y < -15)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
