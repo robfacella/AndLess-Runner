@@ -493,10 +493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBod: {fileID: 1569914713}
   testGround: {fileID: 1574831469}
-  groundTestingRadius: 0.1
+  groundTestingRadius: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  extraJumps: 1
 --- !u!1 &1574831468
 GameObject:
   m_ObjectHideFlags: 0
